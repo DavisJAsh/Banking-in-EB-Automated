@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''#!/bin/bash
                 chmod +x system_resources_test.sh
-                ./system_resources_test.sh
+                /home/ubuntu/Banking-in-EB-Automated/scripts/system_resources_test.sh
                 '''
             }
         }
