@@ -4,8 +4,8 @@ pipeline {
         stage ('Build') {
             steps {
                 sh '''#!/bin/bash
-                python3.7 -m venv venv
-                source venv/bin/activate
+                python3.7 -m venv Banking-V2_main
+                source Banking-V2_main/bin/activate
                 pip install pip --upgrade
                 pip install -r requirements.txt
                 '''
@@ -22,8 +22,8 @@ pipeline {
 	stage ('Deploy') {
           steps {
               sh '''#!/bin/bash
-              source venv/bin/activate
-              eb create Banking_App-W2_main --single
+              source Banking-V2_main/bin/activate
+              eb create Banking-V2_main --single
               '''
           }
       }
